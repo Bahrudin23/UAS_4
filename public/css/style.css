@@ -1,0 +1,108 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f7f9fc;
+  color: #333;
+  padding: 20px;
+}
+
+/* Form dan Input */
+form {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form input[type="date"],
+form input[type="file"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px 14px;
+  margin: 10px 0 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #3366cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+form button:hover {
+  background-color: #264d99;
+}
+
+/* Heading dan link */
+h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+table th, table td {
+  padding: 12px 15px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+table th {
+  background-color: #f0f2f5;
+}
+
+/* Floating button */
+.floating-button {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+/* Error atau notifikasi */
+ul, .error {
+  background: #ffe8e8;
+  padding: 15px;
+  margin: 10px auto;
+  color: #b10000;
+  border-radius: 5px;
+  max-width: 600px;
+  list-style: none;
+}
