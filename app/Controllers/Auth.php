@@ -32,13 +32,17 @@ class Auth extends BaseController
         }
 
         $session->set([
-            'user_id' => $user['id'],
+            'user_id'  => $user['id'],
             'username' => $user['username'],
-            'role' => $user['role'],
-            'logged_in' => true
+            'role'     => $user['role'],
+            'logged_in'=> true
         ]);
 
-        return redirect()->to('/dashboard');
+        if ($user['role'] === 'admin') {
+            return redirect()->to('/admin/barang');
+        } else {
+            return redirect()->to('/dashboard');
+        }
     }
 
     public function register()

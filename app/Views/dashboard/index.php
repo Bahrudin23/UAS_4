@@ -4,12 +4,17 @@
     <title><?= $title ?></title>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
-    
 </head>
 <body>
     <h2>Dashboard</h2>
 
-    <a href="/logout">Logout</a>
+    <a href="/logout" style="float: right;">Logout</a>
+
+    <?php if (session()->get('role') === 'admin') : ?>
+        <h4>Selamat datang, Admin</h4>
+    <?php else: ?>
+        <h4>Selamat datang, User</h4>
+    <?php endif; ?>
 
     <h3>Stok Barang</h3>
     <form method="get">
@@ -40,9 +45,11 @@
         </tbody>
     </table>
 
-    <button onclick="window.location.href='/barang/tambah'">
-        <i data-feather="plus"></i> Tambah Barang
-    </button>
+    <?php if (session()->get('role') === 'admin') : ?>
+        <button onclick="window.location.href='/barang/tambah'">
+            <i data-feather="plus"></i> Tambah Barang
+        </button>
+    <?php endif; ?>
 
     <script>
         feather.replace();
